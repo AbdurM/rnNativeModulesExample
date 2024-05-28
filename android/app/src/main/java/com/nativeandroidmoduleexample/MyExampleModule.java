@@ -4,6 +4,8 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.nativeandroidmoduleexample.MainActivity;
+
 import java.util.Map;
 import java.util.HashMap;
 import android.util.Log;
@@ -22,5 +24,6 @@ public class MyExampleModule extends ReactContextBaseJavaModule {
     public void exampleMethod() {
         //This is where you call the native method or code for your native android library
         Log.d("MyExampleModule", "ExampleMethod called");
+        MainActivity.getInstance().initLp();
     }
 }
